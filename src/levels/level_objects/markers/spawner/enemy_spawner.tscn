@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dm8mlo7gu1lsp"]
+
+[ext_resource type="Script" uid="uid://cn71d534fqucy" path="res://src/levels/level_objects/markers/spawner/enemy_spawner.gd" id="1_3q2j1"]
+[ext_resource type="Script" uid="uid://bmgfd0d8qbt3r" path="res://src/levels/level_objects/markers/spawner/preview_sprite.gd" id="2_1d73k"]
+
+[node name="EnemySpawner" type="Marker2D" unique_id=849149044]
+script = ExtResource("1_3q2j1")
+metadata/_custom_type_script = "uid://dsui0vapt3w2a"
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=368798033]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=686123286]
+
+[node name="PreviewSprite" type="Sprite2D" parent="." unique_id=409441761]
+script = ExtResource("2_1d73k")
+
+[node name="PreviewRefreshTimer" type="Timer" parent="PreviewSprite" unique_id=280502347]

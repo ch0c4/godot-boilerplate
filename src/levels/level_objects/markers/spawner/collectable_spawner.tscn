@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bptkple0oeuuy"]
+
+[ext_resource type="Script" uid="uid://bnjhaeb10ixql" path="res://src/levels/level_objects/markers/spawner/collectable_spawner.gd" id="1_c8v63"]
+[ext_resource type="Texture2D" uid="uid://dagt4tpnjg47b" path="res://src/levels/level_objects/markers/spawner/null_sprite.png" id="2_3plbx"]
+[ext_resource type="Script" uid="uid://bmgfd0d8qbt3r" path="res://src/levels/level_objects/markers/spawner/preview_sprite.gd" id="2_c8v63"]
+
+[node name="CollectableSpawner" type="Marker2D" unique_id=849149044]
+script = ExtResource("1_c8v63")
+metadata/_custom_type_script = "uid://dsui0vapt3w2a"
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=368798033]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=686123286]
+
+[node name="PreviewSprite" type="Sprite2D" parent="." unique_id=409441761]
+texture = ExtResource("2_3plbx")
+script = ExtResource("2_c8v63")
+
+[node name="PreviewRefreshTimer" type="Timer" parent="PreviewSprite" unique_id=280502347]
+wait_time = 0.25

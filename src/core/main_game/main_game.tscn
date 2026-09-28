@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dso3em5mfy4d8"]
+
+[ext_resource type="Script" uid="uid://d2bdv5k26u5yq" path="res://src/core/main_game/main_game.gd" id="1_3fed5"]
+
+[node name="MainGame" type="Node" unique_id=1565136391]
+process_mode = 3
+script = ExtResource("1_3fed5")
+
+[node name="Systems" type="Node" parent="." unique_id=1955793037]
+process_mode = 3
+
+[node name="World" type="Node2D" parent="." unique_id=754513221]
+process_mode = 1
+y_sort_enabled = true
+
+[node name="LevelRoot" type="Node2D" parent="World" unique_id=1808237476]
+unique_name_in_owner = true
+process_mode = 1
+y_sort_enabled = true
+
+[node name="EntityRoot" type="Node2D" parent="World" unique_id=1845874112]
+unique_name_in_owner = true
+process_mode = 1
+y_sort_enabled = true
+
+[node name="EffectRoot" type="Node2D" parent="World" unique_id=1076823851]
+unique_name_in_owner = true
+process_mode = 1
+y_sort_enabled = true
+
+[node name="HudLayer" type="CanvasLayer" parent="." unique_id=994788365]
+process_mode = 1
+layer = 10
+
+[node name="HudRoot" type="Control" parent="HudLayer" unique_id=1198529480]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=1895838098]
+process_mode = 2
+layer = 20
+
+[node name="PauseRoot" type="Control" parent="PauseLayer" unique_id=243985188]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=272244983]
+process_mode = 3
+layer = 100
+
+[node name="TransitionRoot" type="Control" parent="TransitionLayer" unique_id=1577023357]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
